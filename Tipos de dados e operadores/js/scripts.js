@@ -75,4 +75,10 @@ console.log(!5 > 2);
 //Empty Values (undefined e null)
 console.log(typeof null, typeof undefined)
 
-console.log(null = == undefined)
+console.log(null === undefined)
+
+
+// mudança de tipos
+console.log("10" + 1);
+
+console.log("10" - 1);
