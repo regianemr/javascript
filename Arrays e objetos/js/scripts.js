@@ -108,26 +108,65 @@
 // console.log(b);
 
 // Loops em arrays (listas)
-const users = ["Regi", "Vera", "Gleison", "Raquel"]
+// const users = ["Regi", "Vera", "Gleison", "Raquel"]
 
-for(let i = 0; i < users.length; i++) {
-    console.log(`Listando o usuário: ${users[i]}`)
-}
+// for(let i = 0; i < users.length; i++) {
+//     console.log(`Listando o usuário: ${users[i]}`)
+// }
 
-// Métodos de array: push(adiciona um item no fim da lista) e pop(adiciona no inicio da lista)
-const array = ["a", "b", "c"];
+// // Métodos de array: push(adiciona um item no fim da lista) e pop(remove itens no fim da lista)
+// const array = ["a", "b", "c"];
 
-array.push("d");
+// array.push("d");
 
-console.log(array);
+// console.log(array);
 
-console.log(array.length);
+// console.log(array.length);
 
-array.pop()
+// array.pop()
 
-console.log(array);
+// console.log(array);
 
-const itemRemovido = array.pop();
+// const itemRemovido = array.pop();
 
-console.log(itemRemovido);
-console.log(array);
+// console.log(itemRemovido);
+// console.log(array);
+
+// // Métodos array: shift e unshift
+// const letras = ["a", "b", "c"];
+// const letra = letras.shift();
+
+// console.log(letra);
+// console.log(letras);
+
+// letras.unshift("p", "q", "t");
+// letras.unshift("z");
+
+// console.log(letras);
+
+// // indexOf-encontra índice de um elemento lastindexOf-usado quando há repetições de elementos e precisamos do índice da última ocorrência
+// const myElements = ["Uva", "Banana", "Melancia", "Kiwi", "Banana"];
+
+// console.log(myElements.indexOf("Melancia"));
+// console.log(myElements.indexOf("Banana"));
+
+// console.log(myElements[1]);
+// console.log(myElements[(myElements.indexOf("Banana"))]);
+
+// console.log(myElements.lastIndexOf("Banana"))
+
+// Slice
+
+const testeSlice = ["a", "b", "c", "d", "e", "f"]
+
+const subArray = testeSlice.slice(2, 4);
+
+console.log(subArray);
+console.log(testeSlice);
+
+const subArray2 = testeSlice.slice(2, 4 + 1);
+console.log(subArray2);
+
+//slice a partir do índice "2"
+const subArray3 = testeSlice.slice(2);
+console.log(subArray3)
