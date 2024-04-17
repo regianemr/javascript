@@ -188,3 +188,12 @@ posts.forEach((post) => {
     console.log(`Exibindo post: ${post.title}, da categoria: ${post.category}`);
 });
 
+// Includes - verifica se na lista tem um elemento (true, false)
+const brands = ["BMW", "Fiat", "VW"];
+
+console.log(brands.includes("Fiat"))
+console.log(brands.includes("KIA"))
+
+if (brands.includes("BMW")) {
+    console.log(`Há carros da marca BMW`)
+}
