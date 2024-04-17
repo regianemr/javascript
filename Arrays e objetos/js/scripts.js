@@ -197,3 +197,10 @@ console.log(brands.includes("KIA"))
 if (brands.includes("BMW")) {
     console.log(`Há carros da marca BMW`)
 }
+
+// Reverse - invete os elementos da lista
+const reverseTest = [1, 2, 3, 4, 5];
+
+reverseTest.reverse();
+console.log(reverseTest);
+
