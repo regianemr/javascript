@@ -172,50 +172,67 @@
 // console.log(subArray3)
 
 // Método forEach - como for e while
-const nums = [1, 2, 3, 4, 5];
+// const nums = [1, 2, 3, 4, 5];
 
-nums.forEach((numero) => {
-    console.log(`O número é ${numero}`);
-});
+// nums.forEach((numero) => {
+//     console.log(`O número é ${numero}`);
+// });
 
-const posts = [
-    {title: "Primeiro post", category: "PHP"},
-    {title: "Segundo post", category: "JavaScript"},
-    {title: "Terceiro post", category: "Python"},
-];
+// const posts = [
+//     {title: "Primeiro post", category: "PHP"},
+//     {title: "Segundo post", category: "JavaScript"},
+//     {title: "Terceiro post", category: "Python"},
+// ];
 
-posts.forEach((post) => {
-    console.log(`Exibindo post: ${post.title}, da categoria: ${post.category}`);
-});
+// posts.forEach((post) => {
+//     console.log(`Exibindo post: ${post.title}, da categoria: ${post.category}`);
+// });
 
-// Includes - verifica se na lista tem um elemento (true, false)
-const brands = ["BMW", "Fiat", "VW"];
+// // Includes - verifica se na lista tem um elemento (true, false)
+// const brands = ["BMW", "Fiat", "VW"];
 
-console.log(brands.includes("Fiat"))
-console.log(brands.includes("KIA"))
+// console.log(brands.includes("Fiat"))
+// console.log(brands.includes("KIA"))
 
-if (brands.includes("BMW")) {
-    console.log(`Há carros da marca BMW`)
-}
+// if (brands.includes("BMW")) {
+//     console.log(`Há carros da marca BMW`)
+// }
 
-// Reverse - invete os elementos da lista
-const reverseTest = [1, 2, 3, 4, 5];
+// // Reverse - invete os elementos da lista
+// const reverseTest = [1, 2, 3, 4, 5];
 
-reverseTest.reverse();
-console.log(reverseTest);
+// reverseTest.reverse();
+// console.log(reverseTest);
 
-// trim - retira os espaços em branco e caracteres invisíveis sem modificar a string original
-const trimTeste = "  testando \n   ";
-console.log(trimTeste);
+// // trim - retira os espaços em branco e caracteres invisíveis sem modificar a string original
+// const trimTeste = "  testando \n   ";
+// console.log(trimTeste);
 
-console.log(trimTeste.trim());
+// console.log(trimTeste.trim());
 
-// padStart - insere um texto no começo da string
-const testepadStart = "1";
+// // padStart - insere um texto no começo da string
+// const testepadStart = "1";
 
-const newNumber = testepadStart.padStart(4, "0"); //4 digitos
-console.log(testepadStart);
-console.log(newNumber);
+// const newNumber = testepadStart.padStart(4, "0"); //4 digitos
+// console.log(testepadStart);
+// console.log(newNumber);
 
-const testpadEnd = newNumber.padEnd(10, "0"); // 10 digitos no final
-console.log(testpadEnd);
+// const testpadEnd = newNumber.padEnd(10, "0"); // 10 digitos no final
+// console.log(testpadEnd);
+
+
+// Split - divide uma string em um array(lista)
+const frase = "O rato roeu a roupa do rei de Roma";
+
+const arrayDaFrase = frase.split(" ");
+
+console.log(arrayDaFrase);
+
+// join - une uma lista em um a string
+const fraseDeNovo = arrayDaFrase.join(" ");
+console.log(frase);
+
+const itensParaComprar = ["Mouse", "Teclado", "Monitor"]
+
+const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}.`
+console.log(fraseDeCompra);
