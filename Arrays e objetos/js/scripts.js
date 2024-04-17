@@ -204,3 +204,18 @@ const reverseTest = [1, 2, 3, 4, 5];
 reverseTest.reverse();
 console.log(reverseTest);
 
+// trim - retira os espaços em branco e caracteres invisíveis sem modificar a string original
+const trimTeste = "  testando \n   ";
+console.log(trimTeste);
+
+console.log(trimTeste.trim());
+
+// padStart - insere um texto no começo da string
+const testepadStart = "1";
+
+const newNumber = testepadStart.padStart(4, "0"); //4 digitos
+console.log(testepadStart);
+console.log(newNumber);
+
+const testpadEnd = newNumber.padEnd(10, "0"); // 10 digitos no final
+console.log(testpadEnd);
