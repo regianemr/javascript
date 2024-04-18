@@ -210,24 +210,24 @@
 // console.log(myPost);
 
  // Herança
- class Mamifero {
-    constructor(patas) {
-    this.patas = patas
-    }
- }
+//  class Mamifero {
+//     constructor(patas) {
+//     this.patas = patas
+//     }
+//  }
 
- class Lobo extends Mamifero {
-    constructor(patas, nome) {
-    super(patas, patas)
-    this.nome = nome
-    }
+//  class Lobo extends Mamifero {
+//     constructor(patas, nome) {
+//     super(patas, patas)
+//     this.nome = nome
+//     }
 
- }
+//  }
 
- const shark = new Lobo(4, "Shark")
- console.log(shark);
+//  const shark = new Lobo(4, "Shark")
+//  console.log(shark);
 
-// Instanceof - verifica se um objeto é pai de outro
-console.log(shark instanceof Lobo);
-console.log(Lobo instanceof Mamifero);
-console.log(new Lobo(4, "teste") instanceof Mamifero);
+// // Instanceof - verifica se um objeto é pai de outro
+// console.log(shark instanceof Lobo);
+// console.log(Lobo instanceof Mamifero);
+// console.log(new Lobo(4, "teste") instanceof Mamifero);
