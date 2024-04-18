@@ -222,17 +222,94 @@
 
 
 // Split - divide uma string em um array(lista)
-const frase = "O rato roeu a roupa do rei de Roma";
+// const frase = "O rato roeu a roupa do rei de Roma";
 
-const arrayDaFrase = frase.split(" ");
+// const arrayDaFrase = frase.split(" ");
 
-console.log(arrayDaFrase);
+// console.log(arrayDaFrase);
 
-// join - une uma lista em um a string
-const fraseDeNovo = arrayDaFrase.join(" ");
-console.log(frase);
+// // join - une uma lista em um a string
+// const fraseDeNovo = arrayDaFrase.join(" ");
+// console.log(frase);
 
-const itensParaComprar = ["Mouse", "Teclado", "Monitor"]
+// const itensParaComprar = ["Mouse", "Teclado", "Monitor"]
 
-const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}.`
-console.log(fraseDeCompra);
+// const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}.`
+// console.log(fraseDeCompra);
+
+// repeat - repete um texto n vezes;
+const palavra = "Testando ";
+console.log(palavra.repeat(5));
+
+// Rest Operator/ Rest Parameters ( ... )
+// const somaInfinita = (...args) => {
+//     let total = 0
+
+//     for(let i = 0; i < args.length; i++) {
+//         total += args[i]
+
+//     }
+
+//     return total
+// }
+
+// console.log(somaInfinita(1, 2, 3));
+// console.log(somaInfinita(155, 5452, 352, 898, 555));
+
+// for...of
+// const somaInfinita2 = (...args) => {
+
+//     let total = 0
+
+//     for(num of args) {
+//         total += num
+//     }
+
+//     return total;
+// };
+
+// console.log(somaInfinita2(1, 2, 4));
+// console.log(somaInfinita2(15, 25, 84));
+
+
+// // Destructuring em objetos
+// const userDetails = {
+//     fistName: "Regiane",
+//     lastName: "Melo",
+//     job: "Programador"
+// }
+
+// const {fistName, lastName, job} = userDetails
+
+// console.log(fistName, lastName, job);
+
+// // renomear variáveis
+// const {fistName: primeiroNome} = userDetails;
+
+// console.log(fistName);
+
+
+// // Destructuring em arrays (lista)
+// const myList = ["avião", "carro", "moto", "bicicleta"]
+
+// const [veioculoA, veiculoB, veiculoC] = myList;
+
+// console.log(veioculoA, veiculoB, veiculoC);
+
+
+// // JSON - exemplo
+// const myJson = '{"name": "Regiane", "age": 28}'
+
+// // JSON para objeto e objeto para JSON
+// const myObjeto = JSON.parse(myJson);
+
+// console.log(myObjeto);
+
+// console.log(myObjeto.name);
+
+// console.log(typeof myObjeto);
+
+// // json invalido
+// const badJson = '{"name": Regiane, "age": 28}';
+// //const myBadObjeto = JSON.parse(badJson);
+
