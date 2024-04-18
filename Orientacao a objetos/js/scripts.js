@@ -105,41 +105,123 @@
 // husky.uivar();
 
 // Classes em JavaScripts - Classes ES6
-class CachorroClasse {
-    constructor(nome, raca) {
-        this.nome = nome;
-        this.raca = raca;
+// class CachorroClasse {
+//     constructor(nome, raca) {
+//         this.nome = nome;
+//         this.raca = raca;
 
+//     }
+// }
+
+// const jeff = new CachorroClasse("Jeff", "Labrador");
+// console.log(jeff);
+
+// console.log(Object.getPrototypeOf(jeff));
+
+// // Mais sobre classes
+// class Caminhao {
+//     constructor(eixos, cor) {
+//         this.eixos = eixos;
+//         this.cor = cor;
+//     }
+
+//     descreverCaminhao() {
+//         console.log(`Este caminhão tem ${this.eixos} eixos e é da cor ${this.cor}`);
+
+//     }
+// }
+
+// const scania = new Caminhao(6, "Vermelha")
+// console.log(scania)
+// scania.descreverCaminhao()
+
+// const c2 = new Caminhao(4, "branca")
+// console.log(c2)
+// c2.descreverCaminhao()
+// console.log(c2.motor)
+// Caminhao.prototype.motor = 4.0;
+
+// const c3 = new Caminhao(6, "Preto");
+// console.log(c3.motor)
+
+// // Override
+// class Humano {
+//     constructor(nome, idade) {
+//         this.nome = nome;
+//         this.idade = idade;
+//     }
+
+// }
+
+// const regiane = new Humano("Regiane", 28);
+// console.log(regiane);
+
+// Humano.prototype.idade = "Não definida"
+// console.log(regiane.idade);
+
+// console.log(Humano.prototype.idade);
+
+// Symbols em Classes - parar criar uma propriedade única e imutável
+class Aviao {
+    constructor(marca, turbina) {
+        this.marcar = marca;
+        this.turbina = turbina;
     }
 }
 
-const jeff = new CachorroClasse("Jeff", "Labrador");
-console.log(jeff);
+const asas = Symbol()
+const pilotos = Symbol()
 
-console.log(Object.getPrototypeOf(jeff));
+Aviao.prototype[asas] = 2;
+Aviao.prototype[pilotos] = 3;
 
-// Mais sobre classes
-class Caminhao {
-    constructor(eixos, cor) {
-        this.eixos = eixos;
-        this.cor = cor;
+const boeing = new Aviao("Boeing", 10);
+
+console.log(boeing);
+
+console.log(boeing[asas]);
+console.log(boeing[pilotos]);
+
+// Getters(exibir valor) e Setters (alterar valor)
+class Post {
+    constructor(titulo, descricao, tags) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.tags = tags;
     }
 
-    descreverCaminhao() {
-        console.log(`Este caminhão tem ${this.eixos} eixos e é da cor ${this.cor}`);
+    get exibirTitulo() {
+        return `Você está lendo ${this.titulo}.`;
+    }
 
+    set adicionarTags(tags) {
+        const tagsArray = tags.split(", ")
+        this.tags = tagsArray;
     }
 }
 
-const scania = new Caminhao(6, "Vermelha")
-console.log(scania)
-scania.descreverCaminhao()
+const myPost = new Post("Algum post", "É um post sobre programação");
 
-const c2 = new Caminhao(4, "branca")
-console.log(c2)
-c2.descreverCaminhao()
-console.log(c2.motor)
-Caminhao.prototype.motor = 4.0;
+console.log(myPost)
 
-const c3 = new Caminhao(6, "Preto");
-console.log(c3.motor)
+console.log(myPost.exibirTitulo);
+
+myPost.adicionarTags = "programação, javascript, js";
+console.log(myPost);
+
+// Herança
+class Mamifero {
+    constructor(patas) {
+        this.patas = patas
+    }
+}
+
+class Lobo extends Mamifero {
+    constructor(patas, nome) {
+        super(patas, patas)
+        this.nome = nome
+    }
+}
+
+const shark = new Lobo(4, "Shark")
+console.log(shark);
