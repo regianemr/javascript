@@ -162,66 +162,72 @@
 // console.log(Humano.prototype.idade);
 
 // Symbols em Classes - parar criar uma propriedade única e imutável
-class Aviao {
-    constructor(marca, turbina) {
-        this.marcar = marca;
-        this.turbina = turbina;
-    }
-}
+// class Aviao {
+//     constructor(marca, turbina) {
+//         this.marcar = marca;
+//         this.turbina = turbina;
+//     }
+// }
 
-const asas = Symbol()
-const pilotos = Symbol()
+// const asas = Symbol()
+// const pilotos = Symbol()
 
-Aviao.prototype[asas] = 2;
-Aviao.prototype[pilotos] = 3;
+// Aviao.prototype[asas] = 2;
+// Aviao.prototype[pilotos] = 3;
 
-const boeing = new Aviao("Boeing", 10);
+// const boeing = new Aviao("Boeing", 10);
 
-console.log(boeing);
+// console.log(boeing);
 
-console.log(boeing[asas]);
-console.log(boeing[pilotos]);
+// console.log(boeing[asas]);
+// console.log(boeing[pilotos]);
 
-// Getters(exibir valor) e Setters (alterar valor)
-class Post {
-    constructor(titulo, descricao, tags) {
-        this.titulo = titulo;
-        this.descricao = descricao;
-        this.tags = tags;
-    }
+// // Getters(exibir valor) e Setters (alterar valor)
+// class Post {
+//     constructor(titulo, descricao, tags) {
+//         this.titulo = titulo;
+//         this.descricao = descricao;
+//         this.tags = tags;
+//     }
 
-    get exibirTitulo() {
-        return `Você está lendo ${this.titulo}.`;
-    }
+//     get exibirTitulo() {
+//         return `Você está lendo ${this.titulo}.`;
+//     }
 
-    set adicionarTags(tags) {
-        const tagsArray = tags.split(", ")
-        this.tags = tagsArray;
-    }
-}
+//     set adicionarTags(tags) {
+//         const tagsArray = tags.split(", ")
+//         this.tags = tagsArray;
+//     }
+// }
 
-const myPost = new Post("Algum post", "É um post sobre programação");
+// const myPost = new Post("Algum post", "É um post sobre programação");
 
-console.log(myPost)
+// console.log(myPost)
 
-console.log(myPost.exibirTitulo);
+// console.log(myPost.exibirTitulo);
 
-myPost.adicionarTags = "programação, javascript, js";
-console.log(myPost);
+// myPost.adicionarTags = "programação, javascript, js";
+// console.log(myPost);
 
-// Herança
-class Mamifero {
+ // Herança
+ class Mamifero {
     constructor(patas) {
-        this.patas = patas
+    this.patas = patas
     }
-}
+ }
 
-class Lobo extends Mamifero {
+ class Lobo extends Mamifero {
     constructor(patas, nome) {
-        super(patas, patas)
-        this.nome = nome
+    super(patas, patas)
+    this.nome = nome
     }
-}
 
-const shark = new Lobo(4, "Shark")
-console.log(shark);
+ }
+
+ const shark = new Lobo(4, "Shark")
+ console.log(shark);
+
+// Instanceof - verifica se um objeto é pai de outro
+console.log(shark instanceof Lobo);
+console.log(Lobo instanceof Mamifero);
+console.log(new Lobo(4, "teste") instanceof Mamifero);
