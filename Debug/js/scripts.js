@@ -62,7 +62,39 @@ checkNumber("teste");
 // Exceptions - erros que nós geramos no programa
 let x = 10
 
-if(x != 11) {
-    throw new Error("O valor de x não pode ser diferente de 11")
+// if(x != 11) {
+//     throw new Error("O valor de x não pode ser diferente de 11")
+// }
+
+
+// try catch
+try {
+    const soma = x + y
+} catch(error) {
+    console.log(`Erro no programa ${error}`);
 }
 
+// finally - vai depois do try catch
+try {
+    const value = checkNumber("asf")
+
+    if (!value) {
+        throw new Error("Valores inválidos")
+    }
+} catch(error) {
+    console.log(`Opa, aconteceu um problema:${error}`)
+}finally {
+    console.log("O código foi executado!")
+}
+
+// assertion 
+function checkArray(arr) {
+
+    if(arr.length ===0) {
+        throw new Error("O array precisa ter elementos");
+    } else {
+        console.log(`O array tem ${arr.length} elementos`);
+    }
+}
+
+checkArray([])
