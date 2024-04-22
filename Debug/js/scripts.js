@@ -97,4 +97,5 @@ function checkArray(arr) {
     }
 }
 
-checkArray([])
+// checkArray
+checkArray([1, 2, 3]);
