@@ -88,18 +88,31 @@
 // console.log("Teste async")
 
 // Isntrução async await
-function resolveComDelay() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("Resolveu a promise");
-        }, 2000);
-    });
+// function resolveComDelay() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Resolveu a promise");
+//         }, 2000);
+//     });
+// }
+
+// async function chamadaAsync() {
+//     console.log("Chamando a Promise, e esperando o resultado")
+//     const result = await resolveComDelay()
+//     console.log(`O resultado chegou: ${result}`)
+// }
+
+// chamadaAsync();
+
+// Generators - semelhante as promises
+function* generator() {
+    yield 1;
+    yield 2;
+    yield 3;
 }
 
-async function chamadaAsync() {
-    console.log("Chamando a Promise, e esperando o resultado")
-    const result = await resolveComDelay()
-    console.log(`O resultado chegou: ${result}`)
-}
+const gen = generator()
 
-chamadaAsync();
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
