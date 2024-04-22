@@ -40,38 +40,49 @@
 // .catch((err) => console.log(`Um erro ocorreu ${err}`));
 
 // Rejeição
-function checkNumber(n) {
-    return new Promise((resolve, reject) => {
+// function checkNumber(n) {
+//     return new Promise((resolve, reject) => {
 
-        if(n > 10) {
-            resolve(`O número é maior que 10`);
-        } else {
-            reject(new Error("Número muito baixo"));
-        }
-    });
+//         if(n > 10) {
+//             resolve(`O número é maior que 10`);
+//         } else {
+//             reject(new Error("Número muito baixo"));
+//         }
+//     });
+// }
+
+// const a = checkNumber(20);
+// const b = checkNumber(10);
+
+// a.then((v) => console.log(`O resultado é ${v}`)).catch((err) => console.log(`Um erro ocorreu: ${err}`))
+// b.then((v) => console.log(`O resultado é ${v}`)).catch((err) => console.log(`Um erro ocorreu: ${err}`))
+
+// // Resolvendo várias promises
+// const p1 = new Promise((resolve, reject) => {
+//     setTimeout(function (){
+//         resolve(10);
+//     }, 3000);
+// });
+
+// const p2 = Promise.resolve(10 + 10);
+
+// const p3 = new Promise((resolve, reject) => {
+//     if (30 > 10) {
+//         resolve(30);
+//     } else {
+//         reject("Error");
+//     }
+// });
+
+// Promise.all([p1, p2, p3]).then((values) => console.log(values));
+
+//Async Functions
+async function somarComDelay(a, b) {
+    return a + b;
 }
 
-const a = checkNumber(20);
-const b = checkNumber(10);
-
-a.then((v) => console.log(`O resultado é ${v}`)).catch((err) => console.log(`Um erro ocorreu: ${err}`))
-b.then((v) => console.log(`O resultado é ${v}`)).catch((err) => console.log(`Um erro ocorreu: ${err}`))
-
-// Resolvendo várias promises
-const p1 = new Promise((resolve, reject) => {
-    setTimeout(function (){
-        resolve(10);
-    }, 3000);
+somarComDelay(2, 4).then((value) => {
+    console.log(`O valor da soma é: ${value}`);
 });
 
-const p2 = Promise.resolve(10 + 10);
-
-const p3 = new Promise((resolve, reject) => {
-    if (30 > 10) {
-        resolve(30);
-    } else {
-        reject("Error");
-    }
-});
-
-Promise.all([p1, p2, p3]).then((values) => console.log(values));
+console.log("Teste async")
