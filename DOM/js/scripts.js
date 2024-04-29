@@ -97,3 +97,12 @@ const product1 = products[0]
 console.log(product1.getBoundingClientRect())
 
 // Estilos com JS
+// As regras separadas por traço no CSS, viram camelCase no JS. Ex: background-color => backgroundColor
+mainContainer.style.color = "red";
+mainContainer.style.backgroundColor = "#333"
+mainContainer.style.paddingBottom = "15px"
+
+// Estilizando vários itens com HTMLCollection
+for(const li of listItens) {
+    li.style.backgroundColor = "#989";
+}
