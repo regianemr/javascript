@@ -6,8 +6,8 @@
     
     try{
 
-        const response = await axios.get(
-            "https://jsonplaceholder.typicode.com/users", 
+        const response = await postsFetch.get(
+            "/users", 
              // 4- Definindo headers 
             {
                 headers: {
@@ -64,7 +64,7 @@
  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    axios.post("https://jsonplaceholder.typicode.com/posts", {
+    postsFetch.post("/posts", {
         title: titleInput.value, 
         body: bodyInput.value, 
         userId: 1,
